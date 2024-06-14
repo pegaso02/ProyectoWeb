@@ -14,12 +14,17 @@ public class webSecurity {
 
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/auth/**").allowedOrigins("http://localhost:4200")
+                        registry.addMapping("/**")
+                        .allowedOrigins("http://localhost:4200")
+
                         .allowedOrigins("http://localhost:4200")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("Content-Type", "Authorization");
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
 
             }
+
+
         };
     }
 
