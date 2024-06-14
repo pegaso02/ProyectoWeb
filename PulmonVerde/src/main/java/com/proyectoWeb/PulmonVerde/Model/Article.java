@@ -8,6 +8,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -20,6 +23,8 @@ public class Article {
     public String title;
     public String author;
     public String content;
+    public LocalDate publishDate;
+    // public String UrlImage;
 
 
 }

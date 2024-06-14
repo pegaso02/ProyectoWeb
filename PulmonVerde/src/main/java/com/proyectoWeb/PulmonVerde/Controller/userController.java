@@ -19,7 +19,7 @@ public class userController {
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody User user){
         userService.registerUser(user.getUsername(), user.getPassword());
-        return ResponseEntity.ok("User registered successfully!");
+        return ResponseEntity.ok().body("{\"message\": \"User registered successfully\"}");
     }
 
     @PostMapping("/login")

@@ -5,6 +5,7 @@ import com.proyectoWeb.PulmonVerde.Repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,6 +24,7 @@ public class ArticleService {
     }
 
     public Article createArticle(Article article) {
+        article.setPublishDate(LocalDate.now());
         return articleRepository.save(article);
     }
 
