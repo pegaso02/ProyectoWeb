@@ -35,6 +35,7 @@ public class ArticleService {
             article.setAuthor(articleDetails.getAuthor());
             article.setTitle(articleDetails.getTitle());
             article.setContent(articleDetails.getContent());
+            article.setUrlImage(articleDetails.getUrlImage());
             return articleRepository.save(article);
         } else {
             throw new RuntimeException("Article not found");

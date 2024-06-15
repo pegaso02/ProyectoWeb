@@ -24,7 +24,7 @@ public class Article {
     public String author;
     public String content;
     public LocalDate publishDate;
-    // public String UrlImage;
+    public String UrlImage;
 
 
 }
