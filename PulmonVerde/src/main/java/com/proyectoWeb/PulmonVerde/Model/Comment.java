@@ -13,6 +13,7 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+    String tittle;
     String comment;
     String author;
     LocalDateTime creationDate;

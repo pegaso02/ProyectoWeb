@@ -26,6 +26,7 @@ public class CommentService {
             Comment comment2 = comment1.get();
             comment2.setComment(comment.getComment());
             comment2.setAuthor(comment.getAuthor());
+            comment2.setTittle(comment.getTittle());
             return commentRepository.save(comment2);
         }
         throw new RuntimeException("Comment not found");
